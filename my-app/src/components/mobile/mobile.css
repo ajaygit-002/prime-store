@@ -1,0 +1,67 @@
+.mobiles {
+  background: #f1f3f6;
+  padding: 30px;
+}
+
+.title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.mobile-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* Card */
+.mobile-card {
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.mobile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.mobile-img {
+  width: 120px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Price */
+.price {
+  color: green;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Button */
+button {
+  background: #ff9f00;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #fb641b;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .mobile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
