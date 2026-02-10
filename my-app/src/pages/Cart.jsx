@@ -89,6 +89,28 @@ function Cart() {
     setEditData({ name: "", price: "" });
   };
 
+  /* ===== CHECKOUT ===== */
+  const handleCheckout = () => {
+    if (items.length === 0) {
+      alert("Your cart is empty!");
+      return;
+    }
+    
+    console.log("your order is done");
+    console.log("Order Details:", {
+      items: items,
+      subtotal: subtotal,
+      shipping: shipping,
+      tax: Math.round(tax),
+      total: Math.round(total),
+      timestamp: new Date().toISOString()
+    });
+    
+    clearCart();
+    alert("✅ Order placed successfully!");
+    navigate("/");
+  };
+
   return (
     <div className="cart-page">
       <div className="cart-container">
@@ -258,7 +280,13 @@ function Cart() {
                 <span>₹{Math.round(total).toLocaleString('en-IN')}</span>
               </div>
 
-              <button className="checkout-btn">Proceed to Checkout</button>
+              <button 
+                className="checkout-btn"
+                onClick={handleCheckout}
+                disabled={items.length === 0}
+              >
+                {items.length === 0 ? "Add Items to Checkout" : "Proceed to Checkout"}
+              </button>
               <button className="continue-btn" onClick={() => navigate("/")}>
                 Continue Shopping
               </button>
