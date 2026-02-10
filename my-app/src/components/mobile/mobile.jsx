@@ -45,6 +45,10 @@ export default function Mobiles() {
     }
   ];
 
+  const viewDetails = (id) => {
+    navigate(`/mobiles/${id}`);
+  };
+
   const addToCartHandler = (item) => {
     addToCart(item);
     navigate("/cart");
@@ -58,20 +62,36 @@ export default function Mobiles() {
         {phones.map((phone) => (
           <div key={phone.id} className="mobile-card">
 
-            {/* IMAGE */}
+            {/* IMAGE - Clickable */}
             <img
               src={phone.img}
               alt={phone.name}
               className="mobile-img"
+              onClick={() => viewDetails(phone.id)}
+              style={{ cursor: "pointer" }}
             />
 
-            <h3>{phone.name}</h3>
+            {/* NAME - Clickable */}
+            <h3 onClick={() => viewDetails(phone.id)} style={{ cursor: "pointer" }}>
+              {phone.name}
+            </h3>
 
             <p className="price">₹{phone.price.toLocaleString()}</p>
 
-            <button onClick={() => addToCartHandler(phone)}>
-              Add to Cart
-            </button>
+            <div className="mobile-buttons">
+              <button 
+                className="view-btn"
+                onClick={() => viewDetails(phone.id)}
+              >
+                View Details
+              </button>
+              <button 
+                className="cart-btn"
+                onClick={() => addToCartHandler(phone)}
+              >
+                Add to Cart
+              </button>
+            </div>
 
           </div>
         ))}

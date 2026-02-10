@@ -1,0 +1,176 @@
+/* ===================================
+   ELECTRONICS PAGE STYLING
+   Flipkart / Amazon style layout
+   =================================== */
+
+/* Page background */
+.electronics {
+  background: #f1f3f6;
+  padding: 30px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ===============================
+   TITLE
+   =============================== */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #212121;
+  text-align: center;
+}
+
+
+/* ===============================
+   GRID LAYOUT
+   =============================== */
+.electronics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* ===============================
+   CARD
+   =============================== */
+.electronics-card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Hover effect */
+.electronics-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ===============================
+   IMAGE
+   =============================== */
+.electronics-img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+
+/* ===============================
+   PRODUCT NAME
+   =============================== */
+.electronics-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 8px 0;
+  min-height: 40px;
+}
+
+
+/* ===============================
+   PRICE
+   =============================== */
+.price {
+  color: #388e3c;
+  font-weight: bold;
+  font-size: 17px;
+  margin: 10px 0;
+}
+
+
+/* ===============================
+   BUTTON
+   =============================== */
+.product-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.view-btn, .cart-btn {
+  flex: 1;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-btn {
+  background: #2196F3;
+  color: #ffffff;
+}
+
+.view-btn:hover {
+  background: #1976D2;
+}
+
+.cart-btn {
+  background: #ff9f00;
+  color: #ffffff;
+}
+
+.cart-btn:hover {
+  background: #fb641b;
+}
+
+
+/* ===============================
+   TABLET RESPONSIVE
+   =============================== */
+@media (max-width: 900px) {
+  .electronics-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .electronics-img {
+    height: 140px;
+  }
+}
+
+
+/* ===============================
+   MOBILE RESPONSIVE
+   =============================== */
+@media (max-width: 600px) {
+  .electronics {
+    padding: 15px;
+  }
+
+  .electronics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .electronics-img {
+    height: 120px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+}
+
+
+/* ===============================
+   EXTRA SMALL SCREENS
+   =============================== */
+@media (max-width: 380px) {
+  .electronics-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -52,7 +52,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        © 2024 Prime Store | All Rights Reserved
+        © 2026   Prime Store | All Rights Reserved
       </div>
     </footer>
   );

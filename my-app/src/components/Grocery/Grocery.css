@@ -1,0 +1,144 @@
+/* ===================================
+   GROCERY PAGE STYLING
+   Fresh supermarket look
+   =================================== */
+
+
+/* PAGE */
+.grocery {
+  background: #f3f6f4;
+  padding: 30px 20px;
+  min-height: 100vh;
+}
+
+
+/* TITLE */
+.grocery-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #2e7d32;
+}
+
+
+/* GRID */
+.grocery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 22px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* CARD */
+.grocery-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: 0.25s ease;
+  cursor: pointer;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.grocery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+
+/* IMAGE */
+.grocery-img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  transition: 0.3s;
+}
+
+.grocery-card:hover .grocery-img {
+  transform: scale(1.05);
+}
+
+
+/* NAME */
+.grocery-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin: 8px 0;
+
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* PRICE */
+.grocery-price {
+  color: #2e7d32;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+
+/* BUTTON */
+.grocery-card button {
+  background: linear-gradient(135deg, #43a047, #2e7d32);
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.grocery-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(46,125,50,0.35);
+}
+
+
+/* TABLET */
+@media (max-width: 900px) {
+  .grocery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .grocery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .grocery-img {
+    height: 130px;
+  }
+
+  .grocery-title {
+    font-size: 22px;
+  }
+}
+
+
+/* EXTRA SMALL */
+@media (max-width: 380px) {
+  .grocery-grid {
+    grid-template-columns: 1fr;
+  }
+}

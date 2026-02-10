@@ -1,0 +1,144 @@
+/* ===================================
+   TOYS PAGE STYLING
+   Fun + Colorful Kids Theme
+   =================================== */
+
+
+/* PAGE */
+.toys {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  padding: 30px 20px;
+  min-height: 100vh;
+}
+
+
+/* TITLE */
+.toys-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #ff6f00;
+}
+
+
+/* GRID */
+.toys-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 22px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* CARD */
+.toys-card {
+  background: white;
+  padding: 16px;
+  border-radius: 14px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: 0.25s;
+  cursor: pointer;
+
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.toys-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+
+/* IMAGE */
+.toys-img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  transition: 0.3s;
+}
+
+.toys-card:hover .toys-img {
+  transform: scale(1.08);
+}
+
+
+/* NAME */
+.toys-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin: 8px 0;
+
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* PRICE */
+.toys-price {
+  color: #1976d2;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+
+/* BUTTON */
+.toys-card button {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.toys-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(255,87,34,0.35);
+}
+
+
+/* TABLET */
+@media (max-width: 900px) {
+  .toys-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .toys-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .toys-img {
+    height: 130px;
+  }
+
+  .toys-title {
+    font-size: 22px;
+  }
+}
+
+
+/* EXTRA SMALL */
+@media (max-width: 380px) {
+  .toys-grid {
+    grid-template-columns: 1fr;
+  }
+}

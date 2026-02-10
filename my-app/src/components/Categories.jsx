@@ -7,50 +7,49 @@ export default function Categories() {
   const categories = [
     {
       name: "Mobiles",
-      img: "https://static.vecteezy.com/system/resources/previews/055/244/323/non_2x/stylish-aviator-sunglasses-with-orange-mirrored-lenses-metal-frame-free-png.png",
+      img: "https://png.pngtree.com/png-clipart/20240321/original/pngtree-smart-phone-mockup-png-png-image_14640632.png",
       path: "/mobiles"
     },
     {
-      name: "Laptops",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3l1x_9pS2MAxF1Kt0n5BGN9Cb9EbW3QS7LA&s"
+      name: "Electronics",
+      img: "https://www.pngall.com/wp-content/uploads/1/Electronic.png",
+      path: "/electronics"
     },
     {
       name: "Fashion",
-      img: "https://png.pngtree.com/png-vector/20240914/ourmid/pngtree-fashionable-men-and-women-shopping-together-png-image_12898365.png"
+      img: "https://img.freepik.com/free-photo/portrait-handsome-young-model-man-dressed-jeans-clothes-sunglasses-posing-isolated_158538-9108.jpg?semt=ais_hybrid&w=740&q=80",
+      path: "/fashion"
     },
     {
-      name: "sofa ",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR38GBeXXziQsbDdm9zBD-EkxJFtC7KcEMG4g&s"
+      name: "Monitor",
+      img: "https://img.freepik.com/premium-psd/dell-curved-gaming-monitor_1249303-20954.jpg?semt=ais_hybrid&w=740&q=80",
+      path: "/monitor"
     },
     {
-      name: "washing machine",
-      img: "https://png.pngtree.com/png-vector/20250106/ourmid/pngtree-laundry-washing-machine-set-isolated-on-transparent-background-png-image_15086053.png"
+      name: "Hair Dryer",
+      img: "https://aeno.com/blog/wp-content/uploads/2024/12/tgfhj-1.png",
+      path: "/hair-dryer"
     },
     {
-      name: "fridge",
-      img: "https://png.pngtree.com/png-clipart/20241124/original/pngtree-stocked-fridge-png-image_17288166.png"
+      name: "Beauty",
+      img: "https://img.freepik.com/free-vector/realistic-make-up-brushes-composition_1284-25929.jpg?semt=ais_hybrid&w=740&q=80",
+      path: "/beauty"
     },
     {
-      name: "bed",
-      img: "https://png.pngtree.com/png-vector/20241226/ourmid/pngtree-luxury-comfort-3d-upholstered-queen-bed-with-stylish-headboard-png-image_14907799.png"
+      name: "Grocery",
+      img: "https://png.pngtree.com/png-vector/20240314/ourmid/pngtree-grocery-basket-and-a-list-of-products-png-image_11952487.png",
+      path: "/grocery"
     },
     {
-      name: "dining table",
-      img: "https://static.vecteezy.com/system/resources/previews/049/329/192/non_2x/dining-table-and-chairs-full-of-foods-transparent-background-png.png"
-    },
-    {
-      name: "Sports",
-      img: "https://img.freepik.com/premium-photo/sporting-essentials-diverse-gear-white-png-transparent-background_94628-26847.jpg?w=360"
-    },
-    {
-      name: "Books",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZJruXlGCz1VG3JdWyhdv0O0YNv7HE_z3meg&s"
+      name: "Toys",
+      img: "https://static.vecteezy.com/system/resources/thumbnails/045/726/736/small/toy-cars-trucks-and-other-toys-on-a-transparent-background-ai-generated-free-png.png",
+      path: "/toys"
     }
   ];
 
   return (
     <section className="categories-wrapper">
-      <h2 className="title">Shop by Category</h2>
+      <h2 className="categories-title">Shop by Category</h2>
 
       <div className="categories-grid">
         {categories.map((item) => {
